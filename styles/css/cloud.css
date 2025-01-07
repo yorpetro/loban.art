@@ -1,0 +1,75 @@
+/* Clouds Animation */
+.cloud {
+    position: absolute; /* Allow absolute placement of clouds */
+    height: 180px; /* Control the size */
+    aspect-ratio: 1.8; /* Cloud aspect ratio */
+    --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat; /* Cloud shape mask */
+    mask: var(--g) 100% 100%/30% 60%, var(--g) 70% 0/50% 100%, var(--g) 0 100%/36% 68%, var(--g) 27% 18%/26% 40%, linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
+    background: #ffffff; /* Cloud color */
+    z-index: 1; /* Ensure background placement */
+    opacity: 0.8; /* Slight transparency for a realistic look */
+    animation: moveClouds 20s linear infinite; /* Move clouds continuously */
+}
+
+/* Animation to move clouds horizontally */
+@keyframes moveClouds {
+    0% {
+        transform: translateX(-200px); /* Start outside the left boundary */
+    }
+    100% {
+        transform: translateX(100vw); /* Move to the right end of the screen */
+    }
+}
+
+/* Cloud variations */
+.cloud:nth-child(1) {
+    top: 5%; /* Position the first cloud near the top */
+    left: -150px; /* Start outside the viewport */
+    animation-duration: 25s; /* Slowest-moving cloud */
+}
+
+.cloud:nth-child(2) {
+    top: 20%; /* Lower the position */
+    left: -200px;
+    animation-duration: 18s; /* Moderate speed */
+}
+
+.cloud:nth-child(3) {
+    top: 40%; /* At the middle of the viewport */
+    left: -50px;
+    animation-duration: 15s; /* Faster movement */
+}
+
+.cloud:nth-child(4) {
+    top: 60%;
+    left: -120px;
+    animation-duration: 22s;
+}
+
+.cloud:nth-child(5) {
+    top: 80%;
+    left: -250px; /* Further-left start position */
+    animation-duration: 20s;
+}
+/* Smaller clouds */
+.cloud.small {
+    height: 100px; /* Smaller cloud size */
+    aspect-ratio: 2; /* Slightly wider ratio for variety */
+    opacity: 0.7; /* Make them more transparent to differentiate */
+    animation-duration: 15s; /* Default animation speed for small clouds */
+    z-index: -1;
+}
+
+/* First small cloud */
+.cloud.small:nth-child(6) {
+    top: 10%; /* Position higher in the sky */
+    left: -300px; /* Start further off-screen */
+    animation-duration: 12s; /* Move faster than larger clouds */
+}
+
+/* Second small cloud */
+.cloud.small:nth-child(7) {
+    top: 70%; /* Position closer to the bottom */
+    left: -250px; /* Start further off-screen */
+    animation-duration: 18s; /* Move slightly slower */
+}

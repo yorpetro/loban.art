@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal</title>
+    <link rel="stylesheet" href="styles/css/proposal.css">
+    <link rel="stylesheet" href="styles/css/cloud.css">
+</head>
+<body>
+<div class="cloud"></div>
+<div class="cloud small"></div>
+<div class="cloud small"></div>
+
+<div class="container">
+    <div class="introduction">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus malesuada risus, sed ullamcorper dolor hendrerit id. Donec vitae sapien id neque porttitor posuere. Quisque tristique tincidunt lorem eget luctus.
+    </div>
+    <div class="message">Will you accept this proposal?</div>
+    <div class="buttons">
+        <button class="yes" id="yesButton">Yes</button>
+        <button class="no" id="noButton">No</button>
+    </div>
+</div>
+
+<!-- Fireworks container -->
+<div class="fireworks" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999; pointer-events: none;"></div>
+
+<!-- Include Fireworks library -->
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+
+<!-- Link to the fancyFireworks script -->
+<script src="scripts/animations/fancyFireworks.js"></script>
+
+<!-- Link to the randomButtonMove script -->
+<script src="scripts/movingElements/moveNoButton.js"></script>
+</body>
+</html>
